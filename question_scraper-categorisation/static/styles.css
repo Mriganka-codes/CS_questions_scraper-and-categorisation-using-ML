@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    padding-top: 60px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    margin: 0 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Remaining styles remain unchanged */
+
+
+.sub-topic {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sub-topic button {
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#download-link {
+    margin-top: 20px;
+    display: none;
+}
+.main-topic {
+    border: 2px solid black; /* Add this line for a strong black border */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    z-index: 1;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+    
+
+.main-topic {
+    border: 2px solid black; /* Add this line for a strong black border */
+}
+.popup-buttons {
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+.main-topic-image {
+    max-width: 100%;
+    height: auto;
+}
+.blackboard {
+    position: fixed;
+    left: 30px;
+    top: 250px;
+    width: 200px;
+    height: 200px;
+    border: tan solid 12px;
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f,
+        3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px,
+            rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)),
+        linear-gradient(215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent),
+        radial-gradient(circle at right, #111, rgba(51, 51, 51, 1));
+    background-color: #333;
+}
+
+.blackboard:before {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px,
+            rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent),
+        linear-gradient(200deg, transparent 80%, rgba(50, 50, 50, 0.3)),
+        radial-gradient(ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px,
+            rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);
+    border: #2c2c2c solid 2px;
+    content: "Genrate questions easily. Select the topic of your choice.Click on the download link that is generated";
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12px;
+    color: rgba(256, 256, 256, 1);
+    text-align: center;
+    padding-top: 10px;
+}   
+@media only screen and (max-width: 600px) {
+    .blackboard {
+        position: fixed;
+        left: 10px;
+        top: 150px; /* Adjust the top positioning as needed for smaller screens */
+        width: 150px; /* Adjust the width for smaller screens */
+        height: 150px; /* Adjust the height for smaller screens */
+    }
+
+    .blackboard:before {
+        font-size: 10px; /* Adjust the font size for smaller screens */
+    }
+} 
+.navbar {
+    background-color: black;
+    height: 100px; 
+}
+
+.navbar-brand img {
+    width: 40px; /* Adjust the width of the logo */
+    height: auto;
+    margin-right: 10px; /* Add some margin to the right of the logo */
+}
+
+/* Style the links in the navbar */
+.navbar-nav a {
+    color: white;
+    margin-right: 15px;
+}
+.navbar a {
+    font-size: 1.8em; /* Adjust the font size as needed */
+}
+
+
+.main-topic .card-img-top {
+    max-width: 75px; /* Adjust the max-width to your preference */
+    max-height: 75px; /* Adjust the max-height to your preference */
+    margin: 0 auto; /* Center the image within the card */
+    display: block;
+}
+#sub-topics-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust the gap as needed */
+}
+
+/* Add this style to make the popup larger */
+#popup {
+    max-width: 800px; /* Adjust the max-width as needed */
+}
+
+/* Add this style to adjust subtopic button size */
+#sub-topics-box button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+}
